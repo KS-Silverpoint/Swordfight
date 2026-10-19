@@ -22,8 +22,8 @@ object ModItems {
     val Ice_Shard: Item = register("ice_shard")
     val Orb_Of_Eisenport: Item = register("orb_of_eisenport")
 
-    val Test_Sword: Item = register(
-        "test_sword",
+    val Heavens_wrath: Item = register(
+        "heavens_wrath",
         Item.Properties()
             .sword(ToolMaterial.IRON, 3f, -2.4f)
             .attributes(

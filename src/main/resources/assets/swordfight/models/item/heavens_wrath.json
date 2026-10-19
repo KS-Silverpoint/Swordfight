@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "swordfight:item/test_sword"
+    "layer0": "swordfight:item/heavens_wrath"
   }
 }
