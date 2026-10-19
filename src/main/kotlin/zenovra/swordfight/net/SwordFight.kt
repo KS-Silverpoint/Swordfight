@@ -11,6 +11,7 @@ object SwordFight : ModInitializer {
 
 	override fun onInitialize() {
 		ModItems.init()
+		ModCommands.init()
 
 		LOGGER.info("Hello Fabric world!")
 	}
