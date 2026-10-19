@@ -1,0 +1,1 @@
+$execute as @a run execute if dimension swordfight:alberhut run execute in minecraft:overworld run tp @s $(x) $(y) $(z)

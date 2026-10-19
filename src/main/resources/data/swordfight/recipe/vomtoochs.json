@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "swordfight:vom",
+    "swordfight:vom",
+    "swordfight:vom",
+    "swordfight:vom",
+    "swordfight:vom",
+    "swordfight:vom",
+    "swordfight:vom",
+    "swordfight:vom",
+    "swordfight:vom"
+  ],
+  "result": {
+    "id": "swordfight:ochs",
+    "count": 1
+  }
+}

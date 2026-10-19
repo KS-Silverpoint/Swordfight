@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "swordfight:ice_shard",
+    "P": "minecraft:ender_pearl",
+    "B": "minecraft:snowball"
+  },
+  "pattern": [
+    "IPI",
+    "PBP",
+    "IPI"
+  ],
+  "result":{
+    "id": "swordfight:orb_of_eisenport",
+    "count": 1
+  }
+}

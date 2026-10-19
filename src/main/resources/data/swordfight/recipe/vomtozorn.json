@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "swordfight:vom"
+  ],
+  "result": {
+    "id": "swordfight:zorn",
+    "count": 9
+  }
+}

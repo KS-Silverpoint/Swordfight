@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "b": "barrier"
+  },
+  "pattern": [
+    "   ",
+    " b ",
+    "   "
+  ],
+  "result": {
+    "id": "minecraft:shield"
+  }
+}
