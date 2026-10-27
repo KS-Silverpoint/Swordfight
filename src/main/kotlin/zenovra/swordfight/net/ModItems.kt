@@ -47,6 +47,10 @@ object ModCreativeTabs {
         BuiltInRegistries.CREATIVE_MODE_TAB.key(),
         Identifier.fromNamespaceAndPath("swordfight", "swordfight_tab")
     )
+    val SWORDFIGHTITEMS_TAB_KEY: ResourceKey<CreativeModeTab> = ResourceKey.create(
+        BuiltInRegistries.CREATIVE_MODE_TAB.key(),
+        Identifier.fromNamespaceAndPath("swordfight", "swordfightitems_tab")
+    )
 
     val SWORDFIGHT_TAB: CreativeModeTab = FabricCreativeModeTab.builder()
         .icon { ItemStack(ModItems.Heavens_Wrath) }
@@ -56,6 +60,12 @@ object ModCreativeTabs {
             output.accept(ModItems.Bad_Omens_Wrath)
             output.accept(ModItems.Bane_Of_The_Void)
             output.accept(ModItems.Prismatic_Blade)
+        }
+        .build()
+    val SWORDFIGHTITEMS_TAB: CreativeModeTab = FabricCreativeModeTab.builder()
+        .icon { ItemStack(ModItems.Orb_Of_Eisenport) }
+        .title(Component.translatable("creativeTab.swordfightitems"))
+        .displayItems { _, output ->
             output.accept(ModItems.Zorn)
             output.accept(ModItems.Vom)
             output.accept(ModItems.Ochs)
@@ -66,5 +76,6 @@ object ModCreativeTabs {
 
     fun init() {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, SWORDFIGHT_TAB_KEY, SWORDFIGHT_TAB)
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, SWORDFIGHTITEMS_TAB_KEY, SWORDFIGHTITEMS_TAB)
     }
 }
