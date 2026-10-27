@@ -24,6 +24,26 @@ object ModCommands {
                             Command.SINGLE_SUCCESS
                         }
                     )
+                    .then(
+                        Commands.literal("colosseum_teleport").executes { context ->
+                            val source = context.source
+                            source.server.commands.performPrefixedCommand(
+                                source,
+                                "function swordfight:colosseum_teleport"
+                            )
+                            Command.SINGLE_SUCCESS
+                        }
+                    )
+                    .then(
+                        Commands.literal("colosseum_setup").executes { context ->
+                            val source = context.source
+                            source.server.commands.performPrefixedCommand(
+                                source,
+                                "function swordfight:colosseum_setup"
+                            )
+                            Command.SINGLE_SUCCESS
+                        }
+                    )
             )
         }
     }
