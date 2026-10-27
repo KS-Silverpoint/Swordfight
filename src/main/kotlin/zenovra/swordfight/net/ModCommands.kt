@@ -3,6 +3,7 @@ package zenovra.swordfight.net
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
 import com.mojang.brigadier.Command
 import net.minecraft.commands.Commands
+
 object ModCommands {
     fun init() {
         CommandRegistrationCallback.EVENT.register { dispatcher, _, _ ->
