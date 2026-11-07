@@ -25,6 +25,12 @@ object ModItems {
     val Prismatic_Blade: Item = register ("prismatic_blade") { props ->
         PrismaticBlade(props.sword(ToolMaterial.DIAMOND, 4.5f, -2.3f))
     }
+    val Sams_Sword: Item = register ("sams_sword") { props ->
+        SamsSword(props.sword(ToolMaterial.DIAMOND, 4.6f, -2.6f))
+    }
+    val Broken_Stick: Item = register ("broken_stick") { props ->
+        BrokenStick(props.sword(ToolMaterial.DIAMOND, 60.9f, -0.1f))
+    }
     val Zorn: Item = register("zorn")
     val Vom: Item = register("vom")
     val Ochs: Item = register("ochs")
@@ -60,6 +66,8 @@ object ModCreativeTabs {
             output.accept(ModItems.Bad_Omens_Wrath)
             output.accept(ModItems.Bane_Of_The_Void)
             output.accept(ModItems.Prismatic_Blade)
+            output.accept(ModItems.Sams_Sword)
+            output.accept(ModItems.Broken_Stick)
         }
         .build()
     val SWORDFIGHTITEMS_TAB: CreativeModeTab = FabricCreativeModeTab.builder()

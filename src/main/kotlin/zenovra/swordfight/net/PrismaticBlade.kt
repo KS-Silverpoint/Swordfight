@@ -20,7 +20,7 @@ class PrismaticBlade(properties: Properties) : Item(properties) {
     override fun use(level: Level, player: Player, hand: InteractionHand): InteractionResult {
         if (level !is ServerLevel) return InteractionResult.SUCCESS
 
-        val maxDistance = 30.0
+        val maxDistance = 300.0
         val start = player.eyePosition
         val dir = player.lookAngle
         val end = start.add(dir.scale(maxDistance))
@@ -53,11 +53,11 @@ class PrismaticBlade(properties: Properties) : Item(properties) {
             val hue = ((d * 0.04) + (level.gameTime * 0.02)) % 1.0
             val color = Mth.hsvToRgb(hue.toFloat(), 1f, 1f)
 
-            level.sendParticles(DustParticleOptions(color, 1.2f), p.x, p.y, p.z, 1, 0.0, 0.0, 0.0, 0.0)
-            d += 0.4
+            level.sendParticles(DustParticleOptions(color, 1.0f), p.x, p.y, p.z, 1, 0.0, 0.0, 0.0, 0.0)
+            d += 1.5
         }
 
-        level.playSound(null, player.x, player.y, player.z, SoundEvents.BEACON_ACTIVATE, SoundSource.PLAYERS, 1f, 2f)
+        level.playSound(null, player.x, player.y, player.z, SoundEvents.BEACON_AMBIENT, SoundSource.PLAYERS, 1f, 2f)
         player.cooldowns.addCooldown(player.getItemInHand(hand), 20)
         return InteractionResult.SUCCESS
     }
