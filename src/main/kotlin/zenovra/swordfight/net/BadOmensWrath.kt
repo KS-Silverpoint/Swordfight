@@ -9,6 +9,12 @@ import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.Level
 import net.minecraft.world.phys.BlockHitResult
+import net.minecraft.world.item.ItemStack
+import net.minecraft.world.item.TooltipFlag
+import net.minecraft.network.chat.Component
+import net.minecraft.world.item.Item.TooltipContext
+import net.minecraft.world.item.component.TooltipDisplay
+import java.util.function.Consumer
 
 class BadOmensWrath(properties: Item.Properties) : Item(properties) {
     override fun use(level: Level, player: Player, hand: InteractionHand): InteractionResult {
@@ -20,5 +26,14 @@ class BadOmensWrath(properties: Item.Properties) : Item(properties) {
             player.cooldowns.addCooldown(player.getItemInHand(hand), 240)
         }
         return InteractionResult.SUCCESS
+    }
+    override fun appendHoverText(
+        stack: ItemStack,
+        context: TooltipContext,
+        display: TooltipDisplay,
+        builder: Consumer<Component>,
+        flag: TooltipFlag
+    ) {
+        builder.accept(Component.translatable("item.swordfight.bad_omens_wrath.desc"))
     }
 }

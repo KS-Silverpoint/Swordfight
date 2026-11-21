@@ -1,15 +1,26 @@
 {
+  //items//
   "item.swordfight.zorn": "Zorn",
   "item.swordfight.vom": "Vom",
   "item.swordfight.ochs": "Ochs",
   "item.swordfight.ice_shard": "Ice Shard",
   "item.swordfight.orb_of_eisenport": "Orb Of Eisenport",
+  //swords (quests)//
   "item.swordfight.heavens_wrath": "Heaven's Wrath",
+  "item.swordfight.heavens_wrath.desc": "Crafted from the wings of a fallen angel, forged with the power of a dash",
   "item.swordfight.bad_omens_wrath": "Bad Omen's Wrath",
+  "item.swordfight.bad_omens_wrath.desc": "Imbued with the will of the pilligers, crafted with the ability to create a smoke bomb",
   "item.swordfight.bane_of_the_void": "Bane Of The Void",
+  "item.swordfight.bane_of_the_void.desc": "made from the essence of the void, this weapon allows you to teleport",
   "item.swordfight.prismatic_blade": "Prismatic Blade",
-  "creativeTab.swordfight": "SwordFight Swords",
-  "creativeTab.swordfightitems": "SwordFight Items",
-  "item.swordfight.sams_sword": "Sam Sword",
-  "item.swordfight.broken_stick": "Art's little stick"
+  "item.swordfight.prismatic_blade.desc": "Imbued with the ashes of the rainbow pheonix, this sword allows you to shoot lazers",
+  "item.swordfight.shard_of_oblivion": "Shard of Oblivion",
+  "item.swordfight.shard_of_oblivion.desc": "Forged from ice found at the peak of mount everest,  crafted with the power to slow your enemies",
+  "item.swordfight.sams_sword": "Sam Sword (ADMIN)",
+  "item.swordfight.broken_stick": "Art's little stick (ADMIN)",
+  //creative tabs//
+  "creativeTab.warforgedswords": "Warforged Swords",
+  "creativeTab.warforgeditems": "Warforged Items"
+  //enhanced swords//
+
 }

@@ -10,7 +10,12 @@ import net.minecraft.world.item.Item
 import net.minecraft.world.level.Level
 import net.minecraft.world.phys.Vec3
 import net.minecraft.core.particles.ParticleTypes
-
+import net.minecraft.world.item.ItemStack
+import net.minecraft.world.item.TooltipFlag
+import net.minecraft.network.chat.Component
+import net.minecraft.world.item.Item.TooltipContext
+import net.minecraft.world.item.component.TooltipDisplay
+import java.util.function.Consumer
 
 class HeavensWrath(properties: Item.Properties) : Item(properties) {
     override fun use(level: Level, player: Player, hand: InteractionHand): InteractionResult {
@@ -25,5 +30,14 @@ class HeavensWrath(properties: Item.Properties) : Item(properties) {
 
         player.cooldowns.addCooldown(player.getItemInHand(hand), 40)
         return InteractionResult.SUCCESS
+    }
+    override fun appendHoverText(
+        stack: ItemStack,
+        context: TooltipContext,
+        display: TooltipDisplay,
+        builder: Consumer<Component>,
+        flag: TooltipFlag
+    ) {
+        builder.accept(Component.translatable("item.swordfight.heavens_wrath.desc"))
     }
 }

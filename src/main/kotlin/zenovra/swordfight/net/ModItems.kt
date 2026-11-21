@@ -11,25 +11,43 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Item
 import net.minecraft.core.Registry
 import net.minecraft.world.item.ToolMaterial
+import net.minecraft.world.item.Rarity
 
 object ModItems {
     val Heavens_Wrath: Item = register ("heavens_wrath") { props ->
-        HeavensWrath(props.sword(ToolMaterial.DIAMOND, 2.0f, -2.0f))
+        HeavensWrath(props
+            .sword(ToolMaterial.DIAMOND, 2.0f, -2.0f)
+            .rarity(Rarity.EPIC))
     }
     val Bad_Omens_Wrath: Item = register ("bad_omens_wrath") { props ->
-        BadOmensWrath(props.sword(ToolMaterial.NETHERITE, 4.6f, -2.6f))
+        BadOmensWrath(props
+            .sword(ToolMaterial.NETHERITE, 4.6f, -2.6f)
+            .rarity(Rarity.EPIC))
     }
     val Bane_Of_The_Void: Item = register ("bane_of_the_void") { props ->
-        BaneOfTheVoid(props.sword(ToolMaterial.DIAMOND, 4.6f, -2.6f))
+        BaneOfTheVoid(props
+            .sword(ToolMaterial.DIAMOND, 4.6f, -2.6f)
+            .rarity(Rarity.EPIC))
     }
     val Prismatic_Blade: Item = register ("prismatic_blade") { props ->
-        PrismaticBlade(props.sword(ToolMaterial.DIAMOND, 4.5f, -2.3f))
+        PrismaticBlade(props
+            .sword(ToolMaterial.DIAMOND, 4.5f, -2.3f)
+            .rarity(Rarity.EPIC))
     }
     val Sams_Sword: Item = register ("sams_sword") { props ->
-        SamsSword(props.sword(ToolMaterial.DIAMOND, 4.6f, -2.6f))
+        SamsSword(props
+            .sword(ToolMaterial.DIAMOND, 4.6f, -2.6f)
+            .rarity(Rarity.EPIC))
     }
     val Broken_Stick: Item = register ("broken_stick") { props ->
-        BrokenStick(props.sword(ToolMaterial.DIAMOND, 60.9f, -0.1f))
+        BrokenStick(props
+            .sword(ToolMaterial.DIAMOND, 60.9f, -0.1f)
+            .rarity(Rarity.EPIC))
+    }
+    val Shard_of_Oblivion: Item = register("shard_of_oblivion") { props ->
+        ShardOfOblivion(props.
+        sword(ToolMaterial.NETHERITE, 5.0f, -3f)
+            .rarity(Rarity.EPIC))
     }
     val Zorn: Item = register("zorn")
     val Vom: Item = register("vom")
@@ -51,7 +69,7 @@ object ModItems {
 object ModCreativeTabs {
     val SWORDFIGHT_TAB_KEY: ResourceKey<CreativeModeTab> = ResourceKey.create(
         BuiltInRegistries.CREATIVE_MODE_TAB.key(),
-        Identifier.fromNamespaceAndPath("swordfight", "swordfight_tab")
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Identifier.fromNamespaceAndPath("swordfight", "swordfight_tab")
     )
     val SWORDFIGHTITEMS_TAB_KEY: ResourceKey<CreativeModeTab> = ResourceKey.create(
         BuiltInRegistries.CREATIVE_MODE_TAB.key(),
@@ -60,19 +78,21 @@ object ModCreativeTabs {
 
     val SWORDFIGHT_TAB: CreativeModeTab = FabricCreativeModeTab.builder()
         .icon { ItemStack(ModItems.Heavens_Wrath) }
-        .title(Component.translatable("creativeTab.swordfight"))
+        .title(Component.translatable("creativeTab.warforgedswords"))
         .displayItems { _, output ->
             output.accept(ModItems.Heavens_Wrath)
+            output.accept(ModItems.Shard_of_Oblivion)
+            output.accept(ModItems.Prismatic_Blade)
             output.accept(ModItems.Bad_Omens_Wrath)
             output.accept(ModItems.Bane_Of_The_Void)
-            output.accept(ModItems.Prismatic_Blade)
+
             output.accept(ModItems.Sams_Sword)
             output.accept(ModItems.Broken_Stick)
         }
         .build()
     val SWORDFIGHTITEMS_TAB: CreativeModeTab = FabricCreativeModeTab.builder()
         .icon { ItemStack(ModItems.Orb_Of_Eisenport) }
-        .title(Component.translatable("creativeTab.swordfightitems"))
+        .title(Component.translatable("creativeTab.warforgeditems"))
         .displayItems { _, output ->
             output.accept(ModItems.Zorn)
             output.accept(ModItems.Vom)

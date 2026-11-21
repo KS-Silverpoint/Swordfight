@@ -15,6 +15,12 @@ import net.minecraft.world.item.Item
 import net.minecraft.world.level.ClipContext
 import net.minecraft.world.level.Level
 import net.minecraft.world.phys.HitResult
+import net.minecraft.world.item.ItemStack
+import net.minecraft.world.item.TooltipFlag
+import net.minecraft.network.chat.Component
+import net.minecraft.world.item.Item.TooltipContext
+import net.minecraft.world.item.component.TooltipDisplay
+import java.util.function.Consumer
 
 class PrismaticBlade(properties: Properties) : Item(properties) {
     override fun use(level: Level, player: Player, hand: InteractionHand): InteractionResult {
@@ -60,6 +66,15 @@ class PrismaticBlade(properties: Properties) : Item(properties) {
         level.playSound(null, player.x, player.y, player.z, SoundEvents.BEACON_AMBIENT, SoundSource.PLAYERS, 1f, 2f)
         player.cooldowns.addCooldown(player.getItemInHand(hand), 20)
         return InteractionResult.SUCCESS
+    }
+    override fun appendHoverText(
+        stack: ItemStack,
+        context: TooltipContext,
+        display: TooltipDisplay,
+        builder: Consumer<Component>,
+        flag: TooltipFlag
+    ) {
+        builder.accept(Component.translatable("item.swordfight.prismatic_blade.desc"))
     }
 
 }
