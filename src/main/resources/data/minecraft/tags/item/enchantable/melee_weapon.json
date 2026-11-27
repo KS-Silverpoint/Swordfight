@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "swordfight:prismatic_blade",
+    "swordfight:sams_sword",
+    "swordfight:broken_stick",
+    "swordfight:shard_of_oblivion",
+    "swordfight:heavens_wrath",
+    "swordfight:bad_omens_wrath",
+    "swordfight:bane_of_the_void",
+    "swordfight:echo_of_the_void"
+  ]
+}

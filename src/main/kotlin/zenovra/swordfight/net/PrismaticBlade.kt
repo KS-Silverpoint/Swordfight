@@ -47,7 +47,7 @@ class PrismaticBlade(properties: Properties) : Item(properties) {
         )
         if (entityHit != null) {
             beamEnd = entityHit.location
-            entityHit.entity.hurtServer(level, level.damageSources().playerAttack(player), 8f)
+            entityHit.entity.hurtServer(level, level.damageSources().magic(), 8f)
         }
 
         // make the LAZERBEAM
@@ -73,7 +73,8 @@ class PrismaticBlade(properties: Properties) : Item(properties) {
         display: TooltipDisplay,
         builder: Consumer<Component>,
         flag: TooltipFlag
-    ) {
+    )
+    {
         builder.accept(Component.translatable("item.swordfight.prismatic_blade.desc"))
     }
 

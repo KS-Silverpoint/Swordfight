@@ -29,6 +29,7 @@ import kotlinx.coroutines.delay
 import net.minecraft.network.protocol.game.ClientboundSetSubtitleTextPacket
 
 
+
 class SamsSword(properties: Properties) : Item(properties) {
     override fun hurtEnemy(itemStack: ItemStack, mob: LivingEntity, attacker: LivingEntity) {
         mob.addEffect(MobEffectInstance(MobEffects.SLOWNESS,100 ,1), attacker)
@@ -74,11 +75,23 @@ class SamsSword(properties: Properties) : Item(properties) {
             player.x,
             player.y + 1.0,
             player.z,
-            300,
+            900,
             radius / 2,
             radius / 3,
             radius / 2,
-            0.02
+            0.005
+        )
+
+        level.sendParticles(
+            DustParticleOptions(0xFF0000, 1.0f),
+            player.x,
+            player.y + 1.0,
+            player.z,
+            450,
+            radius / 2,
+            radius / 3,
+            radius / 2,
+            0.005
         )
 
         val title = Component.literal("Reality bends to the will of one amongst you.")

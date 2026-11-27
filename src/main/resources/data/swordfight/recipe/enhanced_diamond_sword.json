@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:emerald",
+    "B": "minecraft:diamond",
+    "X": "minecraft:diamond_sword",
+    "V": "minecraft:quartz"
+  },
+  "pattern": [
+    "PBP",
+    "PBP",
+    "VXV"
+  ],
+  "result":{
+    "id": "swordfight:enhanced_diamond_sword",
+    "count": 1
+  }
+}

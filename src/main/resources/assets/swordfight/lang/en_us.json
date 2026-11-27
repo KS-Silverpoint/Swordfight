@@ -21,7 +21,13 @@
   "item.swordfight.broken_stick": "Art's little stick (ADMIN)",
   //creative tabs//
   "creativeTab.warforgedswords": "Warforged Swords",
-  "creativeTab.warforgeditems": "Warforged Items"
+  "creativeTab.warforgeditems": "Warforged Items",
+  "item.swordfight.spacer": "",
   //enhanced swords//
+  "item.swordfight.echo_of_the_void": "Echo Of The Void",
+  "item.swordfight.echo_of_the_void.desc": "a diamond sword dipped in the essence of the void but not yet fully transformed",
+  "item.swordfight.enhanced_diamond_sword": "Enhanced Diamond Sword",
+
+  "item.swordfight.enhanced_netherite_sword": "Enhanced Netherite Sword"
 
 }

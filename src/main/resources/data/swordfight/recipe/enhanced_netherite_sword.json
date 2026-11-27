@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:emerald",
+    "B": "minecraft:diamond",
+    "X": "minecraft:netherite_sword",
+    "V": "minecraft:quartz",
+    "C": "minecraft:netherite_ingot"
+  },
+  "pattern": [
+    "PBP",
+    "PCP",
+    "VXV"
+  ],
+  "result":{
+    "id": "swordfight:enhanced_netherite_sword",
+    "count": 1
+  }
+}

@@ -27,6 +27,7 @@ class HeavensWrath(properties: Item.Properties) : Item(properties) {
         player.deltaMovement = Vec3(flat.x * 2, flat.y * 1.4, flat.z * 2)
         player.connection.send(ClientboundSetEntityMotionPacket(player))
         level.sendParticles(ParticleTypes.CLOUD, player.x, player.y + 0.1, player.z, 128, 0.8, 0.1, 0.8, 0.02)
+        level.sendParticles(ParticleTypes.POOF, player.x, player.y + 0.1, player.z, 3, 0.8, 0.1, 0.8, 0.02)
 
         player.cooldowns.addCooldown(player.getItemInHand(hand), 40)
         return InteractionResult.SUCCESS
